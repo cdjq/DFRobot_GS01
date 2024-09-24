@@ -31,84 +31,93 @@ GS01是一款可以在最远3米距离跟踪人体头肩和检测五种手势的
   
   
     '''
-      @brief Get the device PID
-      @return Returns the device PID
+      @brief 获取设备 PID
+      @return 返回设备 PID
     '''
     def read_pid(self):
-
+    
     '''
-      @brief Get the device VID
-      @return Returns the device VID
+      @brief 获取设备 VID
+      @return 返回设备 VID
     '''
     def read_vid(self):
-
+    
     '''
-      @brief Get the number of detected faces
-      @return Returns the number of detected faces
+      @brief 获取检测到的面部数量
+      @return 返回检测到的面部数量
     '''
     def get_face_number(self):
-
+    
     '''
-      @brief Configure UART
-      @param baud Baud rate
-      @param parity Parity bit
-      @param stop_bit Stop bits
+      @brief 配置 UART
+      @param baud 波特率
+      @param parity 奇偶校验位
+      @param stop_bit 停止位
     '''
     def config_uart(self, baud, parity, stop_bit):
-
+    
     '''
-      @brief Get the X location of the face
-      @return Returns the X location
+      @brief 获取面部的 X 位置
+      @return 返回 X 位置
     '''
     def get_face_location_x(self):
-
+    
     '''
-      @brief Get the Y location of the face
-      @return Returns the Y location
+      @brief 获取面部的 Y 位置
+      @return 返回 Y 位置
     '''
     def get_face_location_y(self):
-
+    
     '''
-      @brief Get the face score
-      @return Returns the face score
+      @brief 获取面部分数
+      @return 返回面部分数
     '''
     def get_face_score(self):
-
+    
     '''
-      @brief Get the gesture type
-      @return Returns the gesture type
+      @brief 获取手势类型
+             - 1: LIKE (👍) - 蓝色
+             - 2: OK (👌) - 绿色
+             - 3: STOP (🤚) - 红色
+             - 4: YES (✌) - 黄色
+             - 5: SIX (🤙) - 紫色
+      @return 返回手势类型
     '''
     def get_gesture_type(self):
-
+    
     '''
-      @brief Get the gesture score
-      @return Returns the gesture score
+      @brief 获取手势分数
+      @return 返回手势分数
     '''
     def get_gesture_score(self):
-
+    
     '''
-      @brief Set the face detection threshold
-      @param score Threshold score
+      @brief 设置面部检测阈值
+      @n 设置面部检测的阈值（0-100）。默认值为 60%
+      @param score 阈值分数
     '''
     def set_face_detect_thres(self, score):
-
+    
     '''
-      @brief Set the face score threshold
-      @param x Threshold value
+      @brief 设置面部分数阈值
+      @n 设置检测 X 位置的阈值（0-100）。默认值为 60%。
+      @param x 阈值
     '''
     def set_detect_thres(self, x):
-
+    
     '''
-      @brief Set the gesture detection threshold
-      @param score Threshold score
+      @brief 设置手势检测阈值
+      @n 设置手势检测的阈值（0-100）。默认值为 60%。
+      @param score 阈值分数
     '''
-    def set_gesturedetect_thres(self, score):
-
+    def set_gesture_detect_thres(self, score):
+    
     '''
-      @brief Set the device address
-      @param addr Address to set
+      @brief 设置设备地址
+      @param addr 要设置的地址
     '''
     def set_addr(self, addr):
+
 ```
 
 ## 兼容性

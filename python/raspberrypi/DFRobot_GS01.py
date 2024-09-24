@@ -98,6 +98,11 @@ class DFRobot_GS01(object):
 
     '''
       @brief Get the gesture type
+             - 1: LIKE (👍) - blue
+             - 2: OK (👌) - green
+             - 3: STOP (🤚) - red
+             - 4: YES (✌) - yellow
+             - 5: SIX (🤙) - purple
       @return Returns the gesture type
     '''
     def get_gesture_type(self):
@@ -112,6 +117,7 @@ class DFRobot_GS01(object):
 
     '''
       @brief Set the face detection threshold
+      @n Sets the threshold for face detection (0-100). Default is 60%
       @param score Threshold score
     '''
     def set_face_detect_thres(self, score):
@@ -119,6 +125,7 @@ class DFRobot_GS01(object):
 
     '''
       @brief Set the face score threshold
+      @n Sets the threshold for detecting the X coordinate (0-100). Default is 60%.
       @param x Threshold value
     '''
     def set_detect_thres(self, x):
@@ -126,6 +133,7 @@ class DFRobot_GS01(object):
 
     '''
       @brief Set the gesture detection threshold
+      @n Sets the threshold for gesture detection (0-100). Default is 60%.
       @param score Threshold score
     '''
     def set_gesture_detect_thres(self, score):

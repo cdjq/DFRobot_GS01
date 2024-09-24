@@ -56,7 +56,12 @@ void loop(){
         sprintf(str, "detect face at (x = %d, y = %d, score = %d)\n", faceX, faceY, faceScore);
         Serial.print(str);
         
-        // Retrieve gesture type and score
+        // Print the gesture detection results
+        // - 1: LIKE (👍) - blue
+        // - 2: OK (👌) - green
+        // - 3: STOP (🤚) - red
+        // - 4: YES (✌) - yellow
+        // - 5: SIX (🤙) - purple
         uint16_t gestureType = cs01.getGestureType();
         uint16_t gestureScore = cs01.getGestureScore();
         

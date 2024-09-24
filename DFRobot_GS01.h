@@ -120,34 +120,72 @@ public:
     bool setDeviceAddr(uint16_t addr);
 
     /**
-     * @brief Configure the UART settings.
-     * @param baud Baud rate configuration.
-     * @param parity Parity configuration.
-     * @param stopBit Stop bits configuration.
-     * @return Status of the configuration.
+     * @brief Configure UART settings.
+     * 
+     * This method is used to set the UART communication parameters for the device, including baud rate, parity, and stop bits. 
+     * Users can choose the appropriate parameters based on their needs to ensure stable and effective communication with the device.
+     *
+     * @param baud Baud rate configuration, of type `eBaudConfig_t`, with possible values including:
+     *              - `eBaud_1200`  - 1200 baud
+     *              - `eBaud_2400`  - 2400 baud
+     *              - `eBaud_4800`  - 4800 baud
+     *              - `eBaud_9600`  - 9600 baud
+     *              - `eBaud_14400` - 14400 baud
+     *              - `eBaud_19200` - 19200 baud
+     *              - `eBaud_38400` - 38400 baud
+     *              - `eBaud_57600` - 57600 baud
+     *              - `eBaud_115200`- 115200 baud
+     *              - `eBaud_230400`- 230400 baud
+     *              - `eBaud_460800`- 460800 baud
+     *              - `eBaud_921600`- 921600 baud
+     *
+     * @param parity Parity configuration, of type `eParityConfig_t`, with possible values including:
+     *              - `UART_CFG_PARITY_NONE`  - No parity
+     *              - `UART_CFG_PARITY_ODD`   - Odd parity
+     *              - `UART_CFG_PARITY_EVEN`  - Even parity
+     *              - `UART_CFG_PARITY_MARK`  - Mark parity
+     *              - `UART_CFG_PARITY_SPACE` - Space parity
+     *
+     * @param stopBit Stop bits configuration, of type `eStopbits_t`, with possible values including:
+     *                - `UART_CFG_STOP_BITS_0_5` - 0.5 stop bits
+     *                - `UART_CFG_STOP_BITS_1`   - 1 stop bit
+     *                - `UART_CFG_STOP_BITS_1_5` - 1.5 stop bits
+     *                - `UART_CFG_STOP_BITS_2`   - 2 stop bits
+     *
+     * @return Status of the configuration, returning the status code if the configuration is successful; otherwise, it returns an error code.
      */
     uint16_t configUart(eBaudConfig_t baud, eParityConfig_t parity, eStopbits_t stopBit);
 
     /**
      * @brief Set face detection threshold.
+     * 
+     * Sets the threshold for face detection (0-100). Default is 60%.
+     *
      * @param score Threshold value.
-     * @return True if the threshold is set successfully, otherwise false.
+     * @return True if successful, otherwise false.
      */
     bool setFaceDetectThres(uint16_t score);
-
+    
     /**
      * @brief Set detection threshold for X coordinate.
+     * 
+     * Sets the threshold for detecting the X coordinate (0-100). Default is 60%.
+     *
      * @param x Threshold value.
-     * @return True if the threshold is set successfully, otherwise false.
+     * @return True if successful, otherwise false.
      */
-    bool setDetectThres(uint16_t x);  
-
+    bool setDetectThres(uint16_t x);
+    
     /**
      * @brief Set gesture detection threshold.
+     * 
+     * Sets the threshold for gesture detection (0-100). Default is 60%.
+     *
      * @param score Threshold value.
-     * @return True if the threshold is set successfully, otherwise false.
+     * @return True if successful, otherwise false.
      */
     bool setGestureDetectThres(uint16_t score);
+
 
     /**
      * @brief Get the number of faces detected by the device.
@@ -175,7 +213,18 @@ public:
 
     /**
      * @brief Get the type of detected gesture.
-     * @return Gesture type.
+     * 
+     * This method retrieves the currently detected gesture type. The gesture recognition feature can be used in various applications, such as human-machine interaction or control systems. 
+     * The returned gesture type corresponds to the following values:
+     * - 1: LIKE (👍) - blue
+     * - 2: OK (👌) - green
+     * - 3: STOP (🤚) - red
+     * - 4: YES (✌️) - yellow
+     * - 5: SIX (🤙) - purple
+     * 
+     * If no gesture is detected, the return value may be a specific invalid value (e.g., 0).
+     *
+     * @return The detected gesture type, returning the type identifier for the gesture.
      */
     uint16_t getGestureType();
 

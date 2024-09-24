@@ -68,6 +68,11 @@ def loop():
             print("Detect face at (x = {}, y = {}, score = {})".format(face_x, face_y, face_score))
             
             # Get gesture type and score
+            # - 1: LIKE (👍) - blue
+            # - 2: OK (👌) - green
+            # - 3: STOP (🤚) - red
+            # - 4: YES (✌) - yellow
+            # - 5: SIX (🤙) - purple
             gesture_type = cs01.get_gesture_type()
             gesture_score = cs01.get_gesture_score()
             
