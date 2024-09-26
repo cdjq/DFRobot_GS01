@@ -1,5 +1,7 @@
 # DFRobot_CS01
 
+* [English Version](./README.md)
+
 GS01是一款可以在最远3米距离跟踪人体头肩和检测五种手势的传感器
 
 ![正反面svg效果图](https://github.com/cdjq/DFRobot_GS01/raw/master/resources/images/SEN0245svg4.png)
