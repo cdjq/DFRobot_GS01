@@ -7,7 +7,7 @@ GS01是一款可以在最远3米距离跟踪人体头肩和检测五种手势的
 ![Product Image](../../resources/images/SEN0486.png)
 
 
-## 产品链接（https://www.dfrobot.com.cn/goods-3398.html)
+## 产品链接（https://www.dfrobot.com.cn/)
 
   SEN0626:手势识别传感器
 

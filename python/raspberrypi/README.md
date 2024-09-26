@@ -6,7 +6,7 @@ GS01 is a sensor capable of tracking human head and shoulders and detecting five
 
 ![Product Image](../../resources/images/SEN0486.png)
 
-## Product Link（https://www.dfrobot.com/product-2485.html)
+## Product Link（https://www.dfrobot.com/)
     SEN0626:Gesture Sensor 
 ## Table of Contents
 
